@@ -1,0 +1,61 @@
+{
+  "name": "country-currency-symbols",
+  "version": "1.0.0",
+  "description": "Look up currencies, currency symbols and countries by ISO 3166-1 / ISO 4217 codes, names or symbols.",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.js"
+    },
+    "./currencies": {
+      "types": "./dist/currencies.d.ts",
+      "import": "./dist/currencies.js"
+    },
+    "./currency-symbol-map": {
+      "types": "./dist/currency-symbol-map.d.ts",
+      "import": "./dist/currency-symbol-map.js"
+    },
+    "./country-currency-map": {
+      "types": "./dist/country-currency-map.d.ts",
+      "import": "./dist/country-currency-map.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/main.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueprint1985/country-currency-symbols.git"
+  },
+  "keywords": [
+    "country",
+    "currency",
+    "countries",
+    "currencies",
+    "currency-symbol",
+    "iso-4217",
+    "iso-3166"
+  ],
+  "author": "Martin Björling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blueprint1985/country-currency-symbols/issues"
+  },
+  "homepage": "https://github.com/blueprint1985/country-currency-symbols#readme",
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
